@@ -152,6 +152,14 @@
                         <viewLayoutGuide key="safeArea" id="qZn-Gy-TkP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Gerador de Senhas" id="0Ib-Vo-CGX"/>
+                    <connections>
+                        <outlet property="swCapitalLetters" destination="SJ7-2J-kWC" id="Ysc-vw-aSG"/>
+                        <outlet property="swLetters" destination="UyB-wg-ocQ" id="dFl-W7-2pQ"/>
+                        <outlet property="swNumbers" destination="DDk-GC-tMl" id="3ZA-ro-QGe"/>
+                        <outlet property="swSpecialCharacters" destination="QWy-Iw-0y4" id="aSg-8k-EEx"/>
+                        <outlet property="tfNumberOfCharacters" destination="oNe-5C-1wn" id="Q0i-pH-fYV"/>
+                        <outlet property="tfTotalPasswords" destination="P0R-cd-E73" id="kyV-8M-H48"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +168,7 @@
         <!--Lista de Senhas-->
         <scene sceneID="4Zc-LK-Mz3">
             <objects>
-                <viewController id="sse-FL-mj6" sceneMemberID="viewController">
+                <viewController id="sse-FL-mj6" customClass="PasswordViewController" customModule="SuperSenha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mOd-30-iL7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,6 +191,9 @@
                                 <state key="normal" title="Gerar novamente">
                                     <color key="titleColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="generate:" destination="sse-FL-mj6" eventType="touchUpInside" id="Wx8-50-At0"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="99999999999999" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QbP-xx-D4F">
                                 <rect key="frame" x="16" y="138" width="343" height="401"/>
@@ -206,15 +217,18 @@
                         <viewLayoutGuide key="safeArea" id="Fx8-h6-PxL"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lista de Senhas" id="e1F-LU-U7Q"/>
+                    <connections>
+                        <outlet property="tvPasswords" destination="QbP-xx-D4F" id="D4t-Jg-R3p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7t-LO-NAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1805.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Security Tips View Controller-->
         <scene sceneID="DYv-YC-wKS">
             <objects>
-                <viewController id="vsy-0c-YTh" sceneMemberID="viewController">
+                <viewController id="vsy-0c-YTh" customClass="SecurityTipsViewController" customModule="SuperSenha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PzF-IE-7RD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,6 +244,9 @@
                                 <state key="normal" title="fechar">
                                     <color key="titleColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="close:" destination="vsy-0c-YTh" eventType="touchUpInside" id="Uhi-QO-sSd"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dZ-Oj-pVb">
                                 <rect key="frame" x="16" y="70" width="343" height="513"/>
