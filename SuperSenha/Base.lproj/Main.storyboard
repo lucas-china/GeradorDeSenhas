@@ -98,7 +98,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="oga-68-iuc">
-                                <rect key="frame" x="101" y="493" width="172" height="210"/>
+                                <rect key="frame" x="101.5" y="493" width="172" height="210"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usar letras minúsculas " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r3-XD-eLl">
                                 <rect key="frame" x="24" y="216" width="270" height="22"/>
@@ -198,7 +198,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="99999999999999" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QbP-xx-D4F">
                                 <rect key="frame" x="16" y="138" width="343" height="401"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -248,9 +249,8 @@
                                     <action selector="close:" destination="vsy-0c-YTh" eventType="touchUpInside" id="Uhi-QO-sSd"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dZ-Oj-pVb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dZ-Oj-pVb">
                                 <rect key="frame" x="16" y="70" width="343" height="513"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="1. Escolha senhas fáceis de lembrar">
@@ -410,7 +410,11 @@ Há diversos programas disponíveis que armazenam os dados de maneira segura e a
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Aa3-Qf-w55" firstAttribute="top" secondItem="3dJ-HV-4Xj" secondAttribute="top" constant="12" id="4Qw-bP-TdC"/>
+                            <constraint firstItem="4dZ-Oj-pVb" firstAttribute="top" secondItem="Aa3-Qf-w55" secondAttribute="bottom" constant="15" id="9kh-hz-mdl"/>
+                            <constraint firstItem="3dJ-HV-4Xj" firstAttribute="trailing" secondItem="4dZ-Oj-pVb" secondAttribute="trailing" constant="16" id="KtG-n2-ul7"/>
                             <constraint firstItem="Aa3-Qf-w55" firstAttribute="centerX" secondItem="PzF-IE-7RD" secondAttribute="centerX" id="Swp-ht-hqt"/>
+                            <constraint firstItem="cJZ-e1-0cS" firstAttribute="top" secondItem="4dZ-Oj-pVb" secondAttribute="bottom" constant="34" id="V7r-hN-fk9"/>
+                            <constraint firstItem="4dZ-Oj-pVb" firstAttribute="leading" secondItem="3dJ-HV-4Xj" secondAttribute="leading" constant="16" id="faU-iX-fWS"/>
                             <constraint firstItem="3dJ-HV-4Xj" firstAttribute="trailing" secondItem="cJZ-e1-0cS" secondAttribute="trailing" constant="24" id="fjF-zP-2li"/>
                             <constraint firstItem="3dJ-HV-4Xj" firstAttribute="bottom" secondItem="cJZ-e1-0cS" secondAttribute="bottom" constant="20" id="ngc-o2-89W"/>
                         </constraints>
@@ -429,6 +433,7 @@ Há diversos programas disponíveis que armazenam os dados de maneira segura e a
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jV5-xt-KaL">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.72156862749999995" green="0.1215686275" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -24,9 +24,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let passwordViewController = segue.destination as! PasswordViewController
+        if let numberOfPasswords = Int(tfTotalPasswords.text!) {
+            passwordViewController.numberOfPasswords = numberOfPasswords
+        }
+        if let numberOfCharacters = Int(tfNumberOfCharacters.text!) {
+            passwordViewController.numberOfCharacters = numberOfCharacters
+        }
+        passwordViewController.useCapitalLetters = swCapitalLetters.isOn
+        passwordViewController.useSpecialCharacters = swSpecialCharacters.isOn
+        passwordViewController.useNumbers = swNumbers.isOn
+        passwordViewController.useLetters = swLetters.isOn
+        view.endEditing(true)
     }
 
 
